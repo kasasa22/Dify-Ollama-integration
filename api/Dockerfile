@@ -69,6 +69,9 @@ ENV PATH="${VIRTUAL_ENV}/bin:${PATH}"
 # Download nltk data
 RUN python -c "import nltk; nltk.download('punkt'); nltk.download('averaged_perceptron_tagger')"
 
+# Copy the custom model provider
+COPY core/model_runtime/model_providers/mplug_owl /app/api/core/model_runtime/model_providers/mplug_owl/
+
 # Copy source code
 COPY . /app/api/
 

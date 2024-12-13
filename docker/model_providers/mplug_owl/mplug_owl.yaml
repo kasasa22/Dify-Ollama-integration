@@ -1,0 +1,58 @@
+provider: mplugowl
+label:
+  en_US: mPLUG-OWL
+icon_small:
+  en_US: icon_s_en.svg
+icon_large:
+  en_US: icon_l_en.svg
+background: "#F0F9FF"
+help:
+  title:
+    en_US: How to deploy mPLUG-OWL
+  url:
+    en_US: https://github.com/X-PLUG/mPLUG-Owl
+supported_model_types:
+  - llm
+  - vision
+configurate_methods:
+  - customizable-model
+model_credential_schema:
+  model:
+    label:
+      en_US: Model Name
+      zh_Hans: 模型名称
+    placeholder:
+      en_US: Enter your model name (default: mplug-owl3)
+      zh_Hans: 输入模型名称
+  credential_form_schemas:
+    - variable: server_url
+      label:
+        en_US: Server URL
+      type: secret-input
+      required: true
+      placeholder:
+        en_US: Enter your mPLUG-OWL server URL (e.g., http://localhost:8000)
+    - variable: temperature
+      label:
+        en_US: Temperature
+      type: text-input
+      required: false
+      default: '0.7'
+      placeholder:
+        en_US: Model temperature (0.0 to 1.0)
+    - variable: max_tokens
+      label:
+        en_US: Max Tokens
+      type: text-input
+      required: false
+      default: '1000'
+      placeholder:
+        en_US: Maximum number of tokens to generate
+    - variable: invoke_timeout
+      label:
+        en_US: Invoke Timeout (seconds)
+      type: text-input
+      required: true
+      default: '240'
+      placeholder:
+        en_US: Enter invoke timeout value (default: 240)

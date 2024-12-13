@@ -1,0 +1,46 @@
+model_type:
+  llm:
+    supported_model: true
+  text-embedding:
+    supported_model: true
+
+provider: mplug_owl
+label:
+  en_US: "mPLUG-OWL"
+supported_model_types:
+  - llm
+  - text-embedding
+configurate_methods:
+  - customizable-model
+model_credential_schema:
+  model:
+    label:
+      en_US: "Model Name"
+    placeholder:
+      en_US: "Enter your model name"
+  credential_form_schemas:
+    - variable: server_url
+      label:
+        en_US: "Server URL"
+      type: secret-input
+      required: true
+      placeholder:
+        en_US: "Enter your mPLUG-OWL server URL"
+    - variable: temperature
+      label:
+        en_US: "Temperature"
+      type: text-input
+      required: false
+      default: "0.7"
+    - variable: max_tokens
+      label:
+        en_US: "Max Tokens"
+      type: text-input
+      required: false
+      default: "1000"
+    - variable: invoke_timeout
+      label:
+        en_US: "Invoke Timeout"
+      type: text-input
+      required: true
+      default: "240"

@@ -1,0 +1,41 @@
+{
+    "label": {
+        "en-US": "mPLUG-Owl3 Vision Analysis",
+        "zh-Hans": "mPLUG-Owl3 视觉分析"
+    },
+    "form_schema": [
+        {
+            "type": "text",
+            "label": {
+                "en-US": "API Base URL",
+                "zh-Hans": "API基础URL"
+            },
+            "variable": "api_base",
+            "required": true,
+            "default": "http://localhost:8000",
+            "placeholder": "Enter your mPLUG-Owl3 API base URL"
+        },
+        {
+            "type": "number",
+            "label": {
+                "en-US": "Temperature",
+                "zh-Hans": "温度"
+            },
+            "variable": "temperature",
+            "required": false,
+            "default": 0.7,
+            "placeholder": "Model temperature (0.0-1.0)"
+        },
+        {
+            "type": "number",
+            "label": {
+                "en-US": "Max Tokens",
+                "zh-Hans": "最大令牌数"
+            },
+            "variable": "max_tokens",
+            "required": false,
+            "default": 1000,
+            "placeholder": "Maximum tokens in response"
+        }
+    ]
+}

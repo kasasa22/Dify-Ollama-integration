@@ -7,6 +7,10 @@ from configs import dify_config
 from core.entities.provider_entities import QuotaUnit, RestrictModel
 from core.model_runtime.entities.model_entities import ModelType
 from models.provider import ProviderQuotaType
+from core.external_data_tool.mplug_owl3.mplug_owl3 import MPLUGOwl3
+
+__all__ = ['MPLUGOwl3']
+
 
 
 class HostingQuota(BaseModel):

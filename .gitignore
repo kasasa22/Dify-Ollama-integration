@@ -193,3 +193,4 @@ api/.vscode
 
 .idea/
 .vscode
+docker/volumes/ollama/id_ed25519
